@@ -1,25 +1,23 @@
-# auto-matic CLI
+# autoMatic
 
-A CLI for auto-matic.
+A CLI to get matic faucet automatically
 
-## Customizing your CLI
+> this tool acts like a bot making http requests in order to get matic faucet
 
-Check out the documentation at https://github.com/infinitered/gluegun/tree/master/docs.
+## installation
 
-## Publishing to NPM
+```shell
+$ npm i -g auto-matic-cli
+```
+
+## Usage
 
 To package your CLI up for NPM, do this:
 
 ```shell
-$ npm login
-$ npm whoami
-$ npm lint
-$ npm test
-(if typescript, run `npm run build` here)
-$ npm publish
+$ auto-matic 0x624619c8397334CD2DAF159b78787a3b613357Ab
 ```
 
 # License
 
 MIT - see LICENSE
-

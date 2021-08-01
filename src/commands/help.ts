@@ -1,14 +1,14 @@
-import { GluegunToolbox } from "gluegun";
+import { GluegunToolbox } from 'gluegun'
 
-import { version } from "../../package.json";
+import { version } from '../../package.json'
 
 export default {
-  name: "help",
+  name: 'help',
   dashed: true,
-  alias: ["h"],
-  description: "Displays auto-matic CLI help",
-  run: async function (toolbox: GluegunToolbox) {
-    const { print } = toolbox;
+  alias: ['h'],
+  description: 'Displays auto-matic CLI help',
+  run: async function(toolbox: GluegunToolbox) {
+    const { print } = toolbox
 
     print.info(`
       auto-matic version ${version}\n
@@ -16,6 +16,5 @@ export default {
       commands:\n
       --help, -h: ${this.description}\n
     `)
-
   }
 }
