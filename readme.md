@@ -12,8 +12,6 @@ $ npm i -g auto-matic-cli
 
 ## Usage
 
-To package your CLI up for NPM, do this:
-
 ```shell
 $ auto-matic 0x624619c8397334CD2DAF159b78787a3b613357Ab
 ```
