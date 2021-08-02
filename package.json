@@ -1,6 +1,6 @@
 {
   "name": "auto-matic-cli",
-  "version": "0.0.3",
+  "version": "1.1.2",
   "description": "A CLI to get matic faucet automatically",
   "types": "build/types/types.d.ts",
   "bin": {
@@ -19,15 +19,6 @@
     "snapupdate": "jest --updateSnapshot",
     "coverage": "jest --coverage"
   },
-  "files": [
-    "tsconfig.json",
-    "tslint.json",
-    "build",
-    "LICENSE",
-    "readme.md",
-    "docs",
-    "bin"
-  ],
   "license": "MIT",
   "dependencies": {
     "ascii-art": "^2.8.5",
@@ -56,6 +47,9 @@
     "semi": false,
     "singleQuote": true
   },
+  "files": [
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/vieiraricardo/auto-matic.git"
