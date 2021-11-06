@@ -29,6 +29,12 @@ export default {
       return
     }
 
+    if (!web3.utils.isAddress(first)) {
+      print.info('\ndefine a valid ethereum address\n')
+
+      return
+    }
+
     const appScreen = screen({
       smartCSR: true
     })
@@ -45,13 +51,9 @@ export default {
       process.exit(0)
     })
 
-    const asciiArt = await art.font('autoMatic', 'doom').completed()
+    const asciiArt = await art.font('autoMatic', 'Doom').completed()
 
     let interval: any
-
-    function isAddress(address: string) {
-      return address.startsWith('0x') && address.length === 42 ? true : false
-    }
 
     async function getWalletBalance(address: string): Promise<number> {
       return Number(await web3.eth.getBalance(address))
@@ -79,7 +81,7 @@ export default {
           token: 'maticToken'
         })
 
-        if (data.err && data.err.message) {
+        if (data.err.duration) {
           const { duration } = data.err
 
           clearInterval(interval)
@@ -111,10 +113,8 @@ export default {
       }
     }
 
-    if (first && isAddress(first)) {
-      await renderScreen()
+    await renderScreen()
 
-      setInterval(renderScreen, 650000)
-    }
+    setInterval(renderScreen, 65000)
   }
 }
