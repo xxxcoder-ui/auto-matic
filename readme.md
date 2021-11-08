@@ -4,6 +4,8 @@ A CLI to get matic faucet automatically
 
 > this tool acts like a bot making http requests in order to get matic faucet
 
+![screenshot](screenshot.png)
+
 ## installation
 
 ```shell
