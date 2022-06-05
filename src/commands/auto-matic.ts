@@ -14,7 +14,7 @@ export default {
       parameters: { options, first }
     } = toolbox
     const web3 = new Web3(
-      'https://polygon-mumbai.infura.io/v3/295cce92179b4be498665b1b16dfee34'
+      'https://polygon-mainnet.infura.io/v3/dafe7978cb1145039d88ae648aa3278a'
     )
 
     if (options.h || options.help) {
@@ -85,14 +85,14 @@ export default {
           const { duration } = data.err
 
           clearInterval(interval)
-          setTimeout(renderScreen, duration + 1000)
-          interval = setInterval(renderScreen, duration + 65000)
+          setTimeout(renderScreen, duration + 0)
+          interval = setInterval(renderScreen, duration + 0)
 
           return
         } else if (data.err) {
           clearInterval(interval)
-          setTimeout(renderScreen, 2000)
-          interval = setInterval(renderScreen, 65000)
+          setTimeout(renderScreen, )
+          interval = setInterval(renderScreen, 0)
 
           return
         }
@@ -115,6 +115,6 @@ export default {
 
     await renderScreen()
 
-    setInterval(renderScreen, 65000)
+    setInterval(renderScreen, 0)
   }
 }
